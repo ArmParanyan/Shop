@@ -9,10 +9,11 @@ export const Slider = () => {
 
             <div className="about-slider-image-details">
                 <p>HOT DEALS THIS WEEK</p>
-                <h2>SALE 50% OFF
-                    MODERN FURNITURE</h2>
-
-                <button>VIEW NOW</button>
+                <div className="slider-sale">
+                    <h2>SALE 50% OFF <br/>
+                        MODERN FURNITURE</h2>
+                </div>
+                <button className="view-more-button">VIEW NOW</button>
             </div>
         </div>
     );

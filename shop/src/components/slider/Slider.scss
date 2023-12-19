@@ -3,4 +3,58 @@
 .slider-wrapper {
   display: flex;
   background: $pageColor;
+  gap: 80px;
+}
+
+.slider-image-wrapper {
+  padding: 53px 72px;
+
+}
+
+.about-slider-image-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  p {
+    color: #323334;
+    font-family: Roboto, serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.slider-sale {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 30px 76px;
+  h2 {
+    color: #A86A3D;
+    text-align: center;
+    font-family: Roboto, serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.view-more-button {
+  padding: 16px 24px;
+  border: 1px solid  $textColor;
+  background: $button;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+
+  color: $textColor;
+  text-align: center;
+
+  font-family: Roboto, serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.45px;
 }
