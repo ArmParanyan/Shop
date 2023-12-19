@@ -1,0 +1,21 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.header-logo-menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 15px 24px 70px;
+}
+
+.header-router-wrapper {
+  border-top: 1px solid #323334;
+  border-bottom: 1px solid #323334;
+
+  margin: 0 auto;
+  padding: 14px 120px 8px 168px;
+}

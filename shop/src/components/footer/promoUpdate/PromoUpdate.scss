@@ -1,0 +1,65 @@
+@import "../../../scssVariables/scssVariables";
+
+.promo-update-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+
+.date-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.date-comments-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Roboto, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.date-month {
+  color: rgba(255, 255, 255, 0.50);
+
+  font-family: Roboto, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.comments {
+  color: $textColor;
+  font-family: Roboto, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.divider {
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  margin-bottom: 34px;
+  margin-top: 33px;
+}
+
+
+
+.title {
+  color: #F3F6FF;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

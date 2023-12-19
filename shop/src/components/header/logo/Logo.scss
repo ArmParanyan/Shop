@@ -1,0 +1,15 @@
+.header-logo-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+
+  h1 {
+    color: #323334;
+
+    font-family: Roboto, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

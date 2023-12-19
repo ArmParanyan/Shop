@@ -1,0 +1,40 @@
+@import "../../../scssVariables/scssVariables";
+
+.brand-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+.custom-text {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.contacts-icons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.brand-name-text {
+  color: $textColor;
+  font-family: Roboto, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text {
+  color: $textColor;
+  font-family: Roboto, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
