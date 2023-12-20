@@ -113,10 +113,12 @@ const Registration = () => {
 
                         <button className="registration-form-submit-button">Submit</button>
 
-                        <div>
-                            <p className="navigate-to-login">
-                                Already registered please {" "} <Link to={"/login"}> sign in
-                            </Link>
+                        <div className="navigate-to-login">
+
+
+                            <p>
+                                Already registered? please {" "}
+                                <Link to="/login">Sign in here</Link>
                             </p>
 
                         </div>
