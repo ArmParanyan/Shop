@@ -1,0 +1,94 @@
+@import "../../../public/assets/variables/scssVariables/scssVariables";
+
+.bedsheet-sets-wrapper {
+  display: flex;
+  padding: 30px 0;
+  background-image: url("../../../public/assets/images/BEDSHEETSETS.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bedsheet-sets-background {
+  display: flex;
+
+  height: 510px;
+  padding: 115px 0 57px 135px;
+
+}
+
+.bedsheet-sets-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 61px 0 0 130px;
+  background: rgba(249, 211, 112, 0.80);
+
+
+  width: 545px;
+  height: 338px;
+}
+
+.title-pricing-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  .bedsheet-sets-title {
+    color: #323334;
+    font-family: Roboto, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.text-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.bedsheet-sets-pricing {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+
+  .discount {
+    color: #7B5136;
+    font-family: Roboto, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.deleted-text {
+  text-decoration: line-through;
+
+  color: #7B5136;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.bedsheet-sets-details-button {
+  border: 1px solid $textColor;
+  background:  $button;
+
+  padding: 16px;
+
+  color: $textColor;
+
+  /* button */
+  font-family: Roboto, serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.45px;
+}

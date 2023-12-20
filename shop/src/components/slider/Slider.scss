@@ -1,13 +1,27 @@
-@import "../../scssVariables/scssVariables";
+@import "../../../public/assets/variables/scssVariables/scssVariables";
 
 .slider-wrapper {
   display: flex;
+  flex-direction: column;
   background: $pageColor;
-  gap: 80px;
+  gap: 50px;
+
+}
+
+.slider-image-and-about-wrapper {
+  display: flex;
+
+
 }
 
 .slider-image-wrapper {
+
+  display: flex;
+  gap: 131px;
+
   padding: 53px 72px;
+
+
 
 }
 
@@ -57,4 +71,50 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.45px;
+}
+
+.slider-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 35px;
+ }
+
+.slider-change-button {
+  display: flex;
+
+  background: #F3F6FF;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+
+}
+
+.active-slide-button {
+  background: $footer;
+
+}
+.active-slide{
+  background: inherit;
+  position: relative;
+  animation: slide 1s;
+}
+
+@keyframes slide {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+.disabled {
+  display: none;
 }

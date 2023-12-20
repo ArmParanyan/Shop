@@ -1,0 +1,39 @@
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 67px 20px 80px;
+}
+
+.sign-up-for-newsletter {
+  color: #323334;
+  font-family: Roboto, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.subscribe-for-newsletter {
+  color: #323334;
+  font-family: Roboto, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.sign-up-form-for-newsletter {
+  display: flex;
+  border: 1px solid  #050019;
+}
+
+.sign-up-form-input-for-newsletter {
+  width: 515px;
+
+}
+
+.sign-up-button-for-newsletter {
+  display: contents;
+}

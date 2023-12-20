@@ -1,0 +1,52 @@
+.premium-products-wrapper {
+  background-image: url("../../../public/assets/images/premiumProducts.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 265px;
+
+}
+
+.premium-products-text {
+  display: flex;
+  padding-top: 38px;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+
+
+  .premium-products-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .premium-member {
+      color: #222;
+      font-family: Roboto, serif;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .premium-discount {
+      color: #222;
+      font-family: Roboto, serif;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: lowercase;
+    }
+  }
+
+  .not-member {
+    color: #222;
+    font-family: Roboto, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

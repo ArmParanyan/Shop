@@ -1,4 +1,4 @@
-@import "../../../scssVariables/scssVariables";
+@import "../../../../public/assets/variables/scssVariables/scssVariables";
 
 .promo-update-wrapper {
   display: flex;
@@ -56,7 +56,7 @@
 
 
 .title {
-  color: #F3F6FF;
+  color: $textColor;
   font-family: Roboto, serif;
   font-size: 16px;
   font-style: normal;

@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import {Home} from "../pages/home/Home";
 import Navigation from "../components/header/navigation/Navigation";
 
@@ -9,19 +9,32 @@ import {PageNav} from "../pages/pageNav/PageNav";
 import {About} from "../pages/about/About";
 import {News} from "../pages/news/News";
 import {Contact} from "../pages/contact/Contact";
-import Search from "../components/header/search/Search";
 import React from "react";
 import {Cart} from "../pages/cart/Cart";
+import {PageNotFound} from "../pages/pageNotFound/PageNotFound";
+import {Header} from "../components/header/Header";
+import {Footer} from "../components/footer/Footer";
+import Login from "../pages/login/Login";
+import Registration from "../pages/registeration/Registration";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Navigation/>,
+        element: (
+            <>
+                <Header/>
+                <Navigation/>
+                <Footer/>
+            </>
+        ),
         children: [
             {
                 index: true,
-                // path: "/home",
-                element: <Home/>,
+                element: <Navigate to={"/home"} replace/>,
+            },
+            {
+                path: "/home",
+                element: <Home/>
             },
             {
                 path: "/store",
@@ -53,14 +66,26 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/cart",
-                element: <Cart />
+                element: <Cart/>
             },
             {
                 path: "/orders",
-                element: <Cart />
+                element: <Cart/>
             },
+
         ]
+
     },
-
-
+    {
+        path: "/login",
+        element: <Login />
+    },
+    {
+        path: "/register",
+        element: <Registration />
+    },
+    {
+        path: "*",
+        element: <PageNotFound/>
+    },
 ])
