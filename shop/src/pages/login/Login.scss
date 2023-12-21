@@ -1,0 +1,61 @@
+@import "../../../public/assets/variables/scssVariables/scssVariables";
+
+
+.login-form-wrapper {
+
+  display: flex;
+  background: #323334;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  p {
+    color: $textColor;
+    font-family: Roboto, serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+}
+
+.sign-in-inputs-and-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.sign-in-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sign-in-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  label {
+    color: #F3F6FF;
+    font-family: Roboto, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.sign-in-input {
+  border-radius: 30px;
+  padding: 8px;
+  border: 0;
+}

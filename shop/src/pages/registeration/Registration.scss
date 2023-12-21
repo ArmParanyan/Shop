@@ -1,14 +1,24 @@
-
+@import "../../../public/assets/variables/scssVariables/scssVariables";
 
 .registration-wrapper {
   display: flex;
-  height: 100vh;
-  background: #4c8787;
-
+  background: #222222;
+  gap: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 80px 0;
 
+
+}
+
+.register-input-title {
+  color: $textColor;
+  font-family: Roboto, serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .register-input-display {
@@ -27,6 +37,7 @@
 
 .registration-inputs {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -40,12 +51,13 @@
     gap: 6px;
 
     label {
-      color: #323334;
+      color: $textColor;
       font-family: Roboto, serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+
     }
     input {
       padding: 8px 6px;
@@ -57,6 +69,8 @@
 
 
 .registration-form-submit-button {
+  background: $button;
+  color: $textColor;
   width: 120px;
   margin: 0 auto;
   padding: 6px;
@@ -65,4 +79,19 @@
 .navigate-to-login {
   display: flex;
   justify-content: center;
+  color: $textColor;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sign-in-link-from-registration {
+  color: #00baff;
+
+}
+
+.error-message {
+  color: tomato;
 }

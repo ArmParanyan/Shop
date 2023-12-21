@@ -3,7 +3,6 @@ import {Home} from "../pages/home/Home";
 import Navigation from "../components/header/navigation/Navigation";
 
 import {Store} from "../pages/store/Store";
-import {Categories} from "../pages/categories/Categories";
 import {Brand} from "../pages/brand/Brand";
 import {PageNav} from "../pages/pageNav/PageNav";
 import {About} from "../pages/about/About";
@@ -16,6 +15,7 @@ import {Header} from "../components/header/Header";
 import {Footer} from "../components/footer/Footer";
 import Login from "../pages/login/Login";
 import Registration from "../pages/registeration/Registration";
+import {Categories} from "../pages/categories/Categories";
 
 export const router = createBrowserRouter([
     {
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/categories",
-                element: <Categories/>
+                element: <Categories />
             },
             {
                 path: "/brand",
@@ -78,11 +78,21 @@ export const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <Login />
+        element:(
+            <>
+                <Login/>
+                <Footer/>
+            </>
+        )
     },
     {
         path: "/register",
-        element: <Registration />
+        element: (
+            <>
+                <Registration/>
+                <Footer/>
+            </>
+        )
     },
     {
         path: "*",

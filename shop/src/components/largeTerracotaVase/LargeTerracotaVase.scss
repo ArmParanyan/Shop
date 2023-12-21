@@ -1,0 +1,23 @@
+.large-terracota-vase-wrapper {
+  position: relative;
+}
+
+.vase-image {
+  position: absolute;
+  left: 0;
+  top: -3.8px;
+}
+
+.vase-image-text {
+  position: absolute;
+  left: 38.6%;
+  top: 40%;
+  p {
+    color: #323334;
+    font-family: Roboto, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
