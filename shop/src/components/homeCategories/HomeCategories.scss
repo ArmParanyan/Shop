@@ -1,4 +1,21 @@
 .home-category-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 1440px;
+  margin: 0 auto;
+  padding: 57px 0;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+  }
+}
+
+.home-category-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  li {
+    list-style: none;
+  }
 }

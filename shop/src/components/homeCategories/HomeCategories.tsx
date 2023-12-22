@@ -1,16 +1,16 @@
 import {useGetCategories} from "../../hooks/useGetCategories";
 import {ICategories} from "../../interfaces/interfaces";
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 import "./HomeCategories.scss"
-import {useNavigate} from "react-router-dom";
 
 export const HomeCategories = () => {
 
     const navigate = useNavigate();
 
-    const handleCatagoryClick = () => {
-        navigate("/categories")
+    const handleCatagoryClick = (where: string) => {
+        navigate(`/store/${where}`)
     }
 
     const [id, setId] = useState<string>("");
@@ -23,6 +23,9 @@ export const HomeCategories = () => {
         }
     }, [data]);
 
+    if (data)
+    console.log(data[0]._id);
+
     return (
         <div className="home-category-wrapper">
             <ul>
@@ -30,9 +33,11 @@ export const HomeCategories = () => {
                     data.map((item: ICategories, index: number) => {
 
                         return (
-                            <div key={index} onClick={() => handleCatagoryClick()}>
+                            <div className="home-category-icons" key={index} onClick={() => handleCatagoryClick(item._id)}> {/*navigate to /:id on click TODO */}
                                 {/*<li >{item.name}</li>*/}
                                 <img  src={item.icon} alt=""/>
+                                <li >{item.name}</li>
+
                             </div>
                         );
 

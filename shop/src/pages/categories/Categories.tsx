@@ -13,7 +13,7 @@ export const Categories = () => {
         }
     }, [data]);
 
-    <CategoriesMenu />
+    // <CategoriesMenu />
 
     return (
         <div>

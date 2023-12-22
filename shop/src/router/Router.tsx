@@ -38,8 +38,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/store",
-                element: <Store/>
+                element: <Store/>,
+                children: [{
+                    index: true,
+                    // path: "/:id",
+                    // element: <SoreByCatagory /> TODO get category by id and draw in store
+                }]
             },
+
             {
                 path: "/categories",
                 element: <Categories />

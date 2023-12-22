@@ -10,6 +10,8 @@ import LargeTerracotaVase from "../../components/largeTerracotaVase/LargeTerraco
 
 import "./Home.scss"
 import {HomeCategories} from "../../components/homeCategories/HomeCategories";
+import HomePageProducts from "../../components/homepageProducts/HomePageProducts";
+
 export const Home = () => {
     return (
         <div>
@@ -17,15 +19,16 @@ export const Home = () => {
             <Supports/>
 
             <Slider/>
-            <BedsheetSets/>
 
             <div className="chair-vase-wrapper">
-                <InyVintageChair />
-                <LargeTerracotaVase />
+                <InyVintageChair/>
+                <LargeTerracotaVase/>
             </div>
 
-            <HomeCategories />
+            <HomeCategories/>
 
+            <BedsheetSets/>
+            <HomePageProducts/>
             <Newsletter/>
         </div>
     );
