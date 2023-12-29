@@ -8,6 +8,8 @@ export const useGetProducts = (id: string) => {
         queryKey: ["products key", id],
         queryFn: () => {
             return getProducts() ;
-        }
+        },
+        enabled: id != null || id !== "null"
+
     })
 };

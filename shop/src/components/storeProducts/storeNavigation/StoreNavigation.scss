@@ -1,0 +1,54 @@
+@import "../../../../public/assets/variables/scssVariables/scssVariables";
+
+.store-navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 72px;
+
+
+  p {
+    color: #323334;
+    font-family: Roboto, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  nav {
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .store-navigation-links {
+        text-decoration: none;
+        color: #323334;
+
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+
+
+      }
+
+      .active {
+
+        color: $button;
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+    }
+  }
+}

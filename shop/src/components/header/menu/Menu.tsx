@@ -10,7 +10,10 @@ const Menu = () => {
                 alt="user"
             />
             </Link>
+            <Link to={"/shopping_cart"}>
+
             <img src={`/assets/images/shopingCart.png`} alt="shopping cart"/>
+            </Link>
             <img src={`/assets/images/burger.png`} alt="burger"/>
         </div>
     );

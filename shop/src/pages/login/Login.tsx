@@ -2,6 +2,10 @@ import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from "yup";
 
 import "./Login.scss"
+import {useAtom} from "jotai/index";
+import {userAtom} from "../../atom/userAtom";
+import {useNavigate} from "react-router-dom";
+import {useLogin} from "../../hooks/useLogin";
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().email().required(),
@@ -16,7 +20,37 @@ const initialValues = {
 
 const Login = () => {
 
-    const handleSubmit = () => {
+    const {mutate} = useLogin();
+
+
+    const [user, setUser] = useAtom(userAtom);
+
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (values: any) => {
+
+        const existingUsers = JSON.parse(localStorage.getItem('user') || '[]');
+        const userExists = existingUsers.some((user: any) => user.email === values.email);
+
+        if (!userExists) {
+            return  navigate("/register");
+
+        } else {
+            const newUser = {...values};
+            existingUsers.push(newUser);
+            mutate(values);
+
+
+
+            navigate("/home")
+
+        }
+
+        if ( user ){
+            setUser(values)
+        }
+
 
     }
 
@@ -26,7 +60,7 @@ const Login = () => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={() => handleSubmit()} //add useQuery and useMutation for post TODO
+                onSubmit={(values) => handleSubmit(values)}
             >
                 <Form className="sign-in-form">
                     <div className="sign-in-inputs-and-button-wrapper">
@@ -46,7 +80,7 @@ const Login = () => {
                         </div>
                         <div>
 
-                            <button>Submit</button>
+                            <button type="submit">Submit</button>
                         </div>
                     </div>
                 </Form>

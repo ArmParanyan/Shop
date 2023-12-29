@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './Slider.scss';
+import './HomePageSlider.scss';
 
 interface Slide {
     id: number;
     image: string;
 }
 
-const Slider: React.FC = () => {
+const HomePageSlider: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
 
     const handleDotClick = (index: number): void => {
@@ -70,4 +70,4 @@ const Slider: React.FC = () => {
     );
 };
 
-export default Slider;
+export default HomePageSlider;

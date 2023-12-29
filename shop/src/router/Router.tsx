@@ -16,6 +16,9 @@ import {Footer} from "../components/footer/Footer";
 import Login from "../pages/login/Login";
 import Registration from "../pages/registeration/Registration";
 import {Categories} from "../pages/categories/Categories";
+import StoreProducts from "../components/storeProducts/StoreProducts";
+import Products from "../pages/products/Products";
+import {Orders} from "../pages/orders/Orders";
 
 export const router = createBrowserRouter([
     {
@@ -39,11 +42,15 @@ export const router = createBrowserRouter([
             {
                 path: "/store",
                 element: <Store/>,
-                children: [{
-                    index: true,
-                    // path: "/:id",
-                    // element: <SoreByCatagory /> TODO get category by id and draw in store
-                }]
+
+            },
+            {
+                path: "store/:id",
+                element: <StoreProducts />
+            },
+            {
+              path: "products/:id",
+              element:   <Products/>
             },
 
             {
@@ -71,14 +78,14 @@ export const router = createBrowserRouter([
                 element: <Contact/>
             },
             {
-                path: "/cart",
-                element: <Cart/>
-            },
-            {
-                path: "/orders",
+                path: "/shopping_cart",
                 element: <Cart/>
             },
 
+            {
+                path: "/orders",
+                element: <Orders />
+            },
         ]
 
     },

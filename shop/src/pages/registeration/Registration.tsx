@@ -1,18 +1,23 @@
 import "./Registration.scss"
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from "yup";
-import {Link} from "react-router-dom";
+import {redirect, Link, useNavigate} from "react-router-dom";
+import {useRegisrtation} from "../../hooks/useRegistation";
+import {useAtom} from "jotai";
+import {userAtom} from "../../atom/userAtom";
+import React from "react";
+
 
 const validationSchema = Yup.object().shape({
     name: Yup.string().required(),
     email: Yup.string().email().required(),
     password: Yup.string().required(),
-    phone: Yup.string(),
-    street: Yup.string(),
-    apartment: Yup.string(),
-    zip: Yup.string(),
-    city: Yup.string(),
-    country: Yup.string(),
+    phone: Yup.string().required(),
+    street: Yup.string().required(),
+    apartment: Yup.string().required(),
+    zip: Yup.string().required(),
+    city: Yup.string().required(),
+    country: Yup.string().required(),
 })
 
 
@@ -26,13 +31,40 @@ const initialValues = {
     zip: "",
     city: "",
     country: "",
+    isAdmin: true,
 }
 
 const Registration = () => {
 
-    const handleSubmit = () => {
-        console.log(":exo")
+    const {mutate} = useRegisrtation();
+
+    const [user, setUser] = useAtom(userAtom);
+
+
+    const navigate = useNavigate();
+
+
+
+    const handleSubmit = async (values: any) => {
+
+        const existingUsers = JSON.parse(localStorage.getItem('user') || '[]');
+        const userExists = existingUsers.some((user: any) => user.email === values.email);
+
+        if (userExists) {
+            navigate("/login");
+        } else {
+            const newUser = {...values};
+            existingUsers.push(newUser);
+            localStorage.setItem('user', JSON.stringify(existingUsers));
+            setUser(values)
+            mutate(values);
+        }
+
+
+
     }
+
+
 
     return (
         <div className="registration-wrapper">
@@ -42,7 +74,7 @@ const Registration = () => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={() => handleSubmit()}
+                onSubmit={(values) => handleSubmit(values)}
             >
                 <Form className="registration-form">
                     <div className="registration-form-wrapper">
@@ -105,7 +137,7 @@ const Registration = () => {
                             </div>
                         </div>
 
-                        <button className="registration-form-submit-button">Submit</button>
+                        <button type="submit" className="registration-form-submit-button">Submit</button>
 
                         <div className="navigate-to-login">
 

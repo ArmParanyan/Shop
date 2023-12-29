@@ -1,0 +1,101 @@
+@import "../../../public/assets/variables/scssVariables/scssVariables";
+
+.products-by-id-wrapper {
+  display: flex;
+}
+
+.products-main-part {
+  display: flex;
+  gap: 130px;
+  width: 100%;
+  padding: 72px;
+
+}
+
+.products-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  width: 420px;
+}
+
+.products-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.products-name {
+  color: #323334;
+  font-family: Roboto, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.products-price {
+  color: #323334;
+  font-family: Roboto, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.products-description {
+  color: #000;
+  font-family: Roboto, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.products-count-input {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 367px;
+
+}
+
+.products-images-wrapper {
+  display: flex;
+  width: 852px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.count-input {
+  padding: 20px 18px;
+}
+
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  padding: 18px 0;
+
+  background: $button;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  color: #FFF;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.products-Details {
+  width: 856px;
+  height: 309px;
+  margin-left: 72px;;
+  padding: 57px 78px;
+  opacity: 0.7;
+  background: #F9D370;
+}
+
+
+

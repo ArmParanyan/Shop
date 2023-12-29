@@ -9,13 +9,16 @@ export const HomeCategories = () => {
 
     const navigate = useNavigate();
 
-    const handleCatagoryClick = (where: string) => {
-        navigate(`/store/${where}`)
+    const handleCatagoryClick = (id: string) => {
+        navigate(`/store/${id}`)
     }
 
     const [id, setId] = useState<string>("");
 
     const {data} = useGetCategories(id);
+
+
+
 
     useEffect(() => {
         if (data && data.length > 0) {
@@ -23,8 +26,6 @@ export const HomeCategories = () => {
         }
     }, [data]);
 
-    if (data)
-    console.log(data[0]._id);
 
     return (
         <div className="home-category-wrapper">

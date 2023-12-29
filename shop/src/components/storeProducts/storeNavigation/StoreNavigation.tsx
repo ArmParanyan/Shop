@@ -1,16 +1,15 @@
-import {Link, useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useGetCategories} from "../../../hooks/useGetCategories";
 import {ICategories} from "../../../interfaces/interfaces";
 
+import "./StoreNavigation.scss"
 
 const StoreNavigation = () => {
 
     const navigate = useNavigate();
 
-    const handleCatagoryClick = () => {
-        navigate("/store")
-    }
+
 
     const [id, setId] = useState<string>("");
 
@@ -23,18 +22,18 @@ const StoreNavigation = () => {
     }, [data]);
 
     return (
-        <>
+        <div className="store-navigation-wrapper">
             <p>Categories</p>
             <nav>
                 <ul>
                     {data?.map((item: ICategories, index: number) => (
-                        <div>
-                            <Link key={index} to={""}>{item.name}</Link>
+                        <div key={index}>
+                            <NavLink className="store-navigation-links" to={`/store/${item._id}`}>{item.name}</NavLink>
                         </div>
                     ))}
                 </ul>
             </nav>
-        </>
+        </div>
     )
 }
 

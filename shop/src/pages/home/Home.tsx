@@ -1,8 +1,7 @@
-import Navigation from "../../components/header/navigation/Navigation";
 import Search from "../../components/header/search/Search";
 import React from "react";
 import Supports from "../../components/supports/Supports";
-import Slider from "../../components/slider/Slider";
+import HomePageSlider from "../../components/HomePageSlider/HomePageSlider";
 import BedsheetSets from "../../components/bedsheetSets/BedsheetSets";
 import Newsletter from "../../components/newsletter/Newsletter";
 import InyVintageChair from "../../components/inyVintageChair/InyVintageChair";
@@ -18,7 +17,7 @@ export const Home = () => {
             <Search/>
             <Supports/>
 
-            <Slider/>
+            <HomePageSlider/>
 
             <div className="chair-vase-wrapper">
                 <InyVintageChair/>

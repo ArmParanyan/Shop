@@ -8,6 +8,7 @@ export const useGetCategories = (id: string) => {
         queryKey: ["query key", id],
         queryFn: () => {
             return getCategories() ;
-        }
+        },
+        enabled: id != null || id !== "null"
     })
 };
